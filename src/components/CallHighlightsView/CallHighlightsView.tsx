@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import { CallSummary } from "utils/callSummary";
 import { getClassNames } from "./CallHighlightsView.classNames";
 

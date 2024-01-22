@@ -4,10 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { DefaultButton, Panel, PanelType } from "@fluentui/react";
 import AudioPlayer from "components/AudioPlayer/AudioPlayer";
 import CallHighlightsView from "components/CallHighlightsView/CallHighlightsView";
-import { generateTranscript, JsonResultOutput, Transcript } from "utils/transcription";
+import { generateTranscript, Transcript } from "utils/transcription";
 import { CallSummary, generateCallSummary } from "utils/callSummary";
 import { useBoolean } from "@fluentui/react-hooks";
-import { PublicClientApplication } from "@azure/msal-browser"; // Import the missing module
 
 import FilesExplorer from "components/FilesExplorer/FilesExplorer";
 import NavBar from "components/NavBar/NavBar";
@@ -17,8 +16,6 @@ import SideBar from "components/SideBar/SideBar";
 import ConnectionStringBar from "components/ConnectionStringBar/ConnectionStringBar";
 import { Blob, getJsonData } from "utils/blobData";
 import PaginatedAudio from "utils/audioPagination";
-
-import { DefaultAzureCredential, InteractiveBrowserCredential } from "@azure/identity";
 
 export type LoadingStatus = "pending" | "loading" | "successful" | "failed";
 
